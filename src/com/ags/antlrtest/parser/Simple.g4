@@ -11,8 +11,10 @@ stat : expr NL 						# printExpr
 
 expr : expr (MUL | DIV) expr		# MulDiv
      | expr (ADD | SUB) expr		# AddSub
-     | ('-')? FLOAT  				# float
-     | ('-')? INT 					# int       
+     | '-' FLOAT  				# unaryFloat
+     | FLOAT  				        # float
+     | '-' INT                      # unaryInt
+     | INT 					       # int   
      | ID							# id
      | '(' expr ')' 				# parens
      ;

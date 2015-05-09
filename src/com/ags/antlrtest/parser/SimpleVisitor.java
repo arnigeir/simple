@@ -63,6 +63,13 @@ public interface SimpleVisitor<T> extends ParseTreeVisitor<T> {
 	T visitAddSub(@NotNull SimpleParser.AddSubContext ctx);
 
 	/**
+	 * Visit a parse tree produced by {@link SimpleParser#unaryInt}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitUnaryInt(@NotNull SimpleParser.UnaryIntContext ctx);
+
+	/**
 	 * Visit a parse tree produced by {@link SimpleParser#parens}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -82,4 +89,11 @@ public interface SimpleVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitMulDiv(@NotNull SimpleParser.MulDivContext ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link SimpleParser#unaryFloat}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitUnaryFloat(@NotNull SimpleParser.UnaryFloatContext ctx);
 }

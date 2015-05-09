@@ -88,6 +88,17 @@ public interface SimpleListener extends ParseTreeListener {
 	void exitAddSub(@NotNull SimpleParser.AddSubContext ctx);
 
 	/**
+	 * Enter a parse tree produced by {@link SimpleParser#unaryInt}.
+	 * @param ctx the parse tree
+	 */
+	void enterUnaryInt(@NotNull SimpleParser.UnaryIntContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SimpleParser#unaryInt}.
+	 * @param ctx the parse tree
+	 */
+	void exitUnaryInt(@NotNull SimpleParser.UnaryIntContext ctx);
+
+	/**
 	 * Enter a parse tree produced by {@link SimpleParser#parens}.
 	 * @param ctx the parse tree
 	 */
@@ -119,4 +130,15 @@ public interface SimpleListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitMulDiv(@NotNull SimpleParser.MulDivContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link SimpleParser#unaryFloat}.
+	 * @param ctx the parse tree
+	 */
+	void enterUnaryFloat(@NotNull SimpleParser.UnaryFloatContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SimpleParser#unaryFloat}.
+	 * @param ctx the parse tree
+	 */
+	void exitUnaryFloat(@NotNull SimpleParser.UnaryFloatContext ctx);
 }

@@ -110,6 +110,19 @@ public class SimpleBaseListener implements SimpleListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterUnaryInt(@NotNull SimpleParser.UnaryIntContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitUnaryInt(@NotNull SimpleParser.UnaryIntContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterParens(@NotNull SimpleParser.ParensContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -143,6 +156,19 @@ public class SimpleBaseListener implements SimpleListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitMulDiv(@NotNull SimpleParser.MulDivContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterUnaryFloat(@NotNull SimpleParser.UnaryFloatContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitUnaryFloat(@NotNull SimpleParser.UnaryFloatContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
